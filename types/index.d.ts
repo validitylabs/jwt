@@ -11,7 +11,7 @@ declare function jwt(options: jwt.Options): jwt.Middleware;
 
 declare namespace jwt {
     export interface Options {
-        secret: string | Buffer;
+        secret: string | Buffer | Function;
         key?: string;
         getToken?(opts: jwt.Options): string;
         passthrough?: boolean;
